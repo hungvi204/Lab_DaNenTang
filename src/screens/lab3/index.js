@@ -122,7 +122,7 @@ const Lab3 = () => {
             <Text>Hello World!</Text>
             <Image
               style={styles.image}
-              source={require('../../assets/react_native.png')}
+              source={require('../../assets/images/react_native.png')}
             />
             <Button title="Ẩn Modal" onPress={() => setModalVisible(false)} />
           </View>
