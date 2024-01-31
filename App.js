@@ -12,6 +12,12 @@ import Home from "./src/screens/app/Home"
 import Favorites from "./src/screens/app/Favorites";
 import Profile from "./src/screens/app/Profile"
 import { Image } from "react-native";
+import Bai2 from "./src/screens/lab5/bai2";
+import Bai3 from "./src/screens/lab5/bai3";
+import Lab6 from "./src/screens/lab6";
+import HomeLab6 from "./src/screens/lab6/home";
+
+
 
 
 const Stack = createNativeStackNavigator();
@@ -56,22 +62,23 @@ const Tabs = () => {
 const App = () => {
   const isSignedIn = false;
   return (
-    <NavigationContainer>
-      <Stack.Navigator >
-        {isSignedIn ? (
-          <>
-            <Stack.Screen name='Tabs' component={Tabs} options={{ headerShown: false }} />
-          </>
-        ) : (
-          <>
-            <Stack.Screen name='Splash' component={Splash} options={{ headerShown: false }} />
-            <Stack.Screen name='SignIn' component={SignIn} options={{ headerShown: false }} />
-            <Stack.Screen name='SignUp' component={SignUp} options={{ headerShown: false }} />
-            <Stack.Screen name="Tabs" component={Tabs} options={{ headerShown: false }} />
-          </>
-        )}
-      </Stack.Navigator>
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <Stack.Navigator >
+    //     {isSignedIn ? (
+    //       <>
+    //         <Stack.Screen name='Tabs' component={Tabs} options={{ headerShown: false }} />
+    //       </>
+    //     ) : (
+    //       <>
+    //         <Stack.Screen name='Splash' component={Splash} options={{ headerShown: false }} />
+    //         <Stack.Screen name='SignIn' component={SignIn} options={{ headerShown: false }} />
+    //         <Stack.Screen name='SignUp' component={SignUp} options={{ headerShown: false }} />
+    //         <Stack.Screen name="Tabs" component={Tabs} options={{ headerShown: false }} />
+    //       </>
+    //     )}
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+    <HomeLab6></HomeLab6>
   );
 };
 

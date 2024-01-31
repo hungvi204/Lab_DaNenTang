@@ -5,12 +5,19 @@ import { styles } from "./styles"
 import Header from "../../../components/header"
 import { categories } from "../../../data/categories"
 import CategoryBox from "../../../components/categoryBox"
+import { products } from "../../../data/product"
+import ProductHomeItem from "../../../components/productHomeItem"
 
 
 const Home = () => {
     const [keyword, setKeyword] = useState(false);
+
     const renderCategoryItem = ({item, index}) => {
         return <CategoryBox title={item?.title} image={item?.image}></CategoryBox>
+    }
+
+    const renderProductItem = ({item}) =>{
+        return <ProductHomeItem {...item}/>
     }
     return (
         <SafeAreaView>
@@ -29,10 +36,14 @@ const Home = () => {
             renderItem={renderCategoryItem}
             keyExtractor={(item, index) => String(index)}
             />
+            <FlatList   
+            style={styles.productList}
+            numColumns={2}
+            data={products}
+            renderItem={renderProductItem}
+            keyExtractor={item => String(item.id)}
+            />
 
-            <ScrollView style={styles.container}>
-                <Text>Home</Text>
-            </ScrollView>
         </SafeAreaView>
     )
 }

@@ -14,6 +14,7 @@ const CategoryBox = ({title, image, onPress }) => {
 
 const styles = StyleSheet.create({
 container: {
+    padding: 10,
     marginHorizontal: 8,
     flexDirection: 'column',
     justifyContent: 'center',
