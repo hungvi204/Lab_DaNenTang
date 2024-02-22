@@ -5,7 +5,7 @@ import Button from "../../components/button";
 
 const Detailis = () => {
     const DetailisScreen: FC<
-    NativeStackScreenProps<RootStackParamList, 'Details'>
+        NativeStackScreenProps<RootStackParamList, 'Details'>
     > = ({ route, navigation }) => {
         const { id, name } = route.params;
         return (
